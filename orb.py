@@ -105,7 +105,7 @@ def display_images(images):
             break
     cv2.destroyAllWindows()
 
-if __name__ == '__main__':
+def run_pipeline():
     args = parse_args() # Parse command line arguments
     image1 = load_and_resize_image(args.image1) # Load and resize the image
     image2 = load_and_resize_image(args.image2)
@@ -114,3 +114,7 @@ if __name__ == '__main__':
     good_matches = match_features(descriptors1, descriptors2) # Match features
     matched_image = draw_matches(image1, keypoints1, image2, keypoints2, good_matches) 
     display_images({'image1': image1, 'image2': image2, 'Matches': matched_image}) # Display the images
+
+
+if __name__ == '__main__':
+   run_pipeline()
