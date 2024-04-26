@@ -105,7 +105,7 @@ def display_images(images):
             break
     cv2.destroyAllWindows()
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     args = parse_args() # Parse command line arguments
     image1 = load_and_resize_image(args.image1) # Load and resize the image
     image2 = load_and_resize_image(args.image2)
